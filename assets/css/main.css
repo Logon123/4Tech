@@ -1,5 +1,4 @@
-
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -262,7 +261,7 @@ h6 {
 .img-fluid{
   border-radius: 5px;
   transition: 1s ease;
-  opacity:70%;
+  opacity:80%;
   
 }
 
@@ -453,6 +452,8 @@ h6 {
     display: block;
   }
 }
+
+
 .footer {
   --background-color: var(--footer-background-color);
   --default-color: #ffffff;
@@ -461,6 +462,7 @@ h6 {
   background-color: var(--background-color);
   font-size: 14px;
   position: relative;
+   
   }
 
 .footer .footer-top {
@@ -1069,20 +1071,8 @@ background-color:var(--contrast-color);
   height: 100%;
   transition: all ease-in-out 0.3s;
 }
-
 .services .service-item:hover{
-  text-align: center;
-  border: 1px solid;
-  border-color: goldenrod;
-  padding: -50px 20px;
-  height: 100%;
-  font-weight:bold;
-  color:#151515;
-  background-clip: border-box;
-  transform: rotateY(180deg) translateX(100%);
-  font-family:'Times New Roman', Times, serif;
-  backface-visibility: hidden;
-  
+border-color: goldenrod;
 }
 
 .services .service-item .icon {
@@ -1620,6 +1610,7 @@ background-color:var(--contrast-color);
 padding: 2px;
   border-style: none;
   align-items: center;
+  height: 80%;
 }
 .formtable .form-control{
   border:#ffc107;
@@ -1821,4 +1812,131 @@ padding: 2px;
 
 .starter-section {
   /* Add your styles here */
+}
+
+
+boda {
+  font-family: 'Montserrat', sans-serif;
+  background: #1e293b;
+  color: #f8fafc;
+}
+
+.app {
+  min-width: 100vw;
+  min-height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+headerw { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  text-align: center;
+  
+  h1 {
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    
+    @media (min-width: 768px) {
+      font-size: 3rem;
+    }
+  }
+  .h1:hover {
+    font-weight: 600;
+    font-size: 2rem;
+    color: goldenrod; }
+  
+}
+
+.tag-list {
+  width: 90%;
+  max-width: 90vw;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 1rem 0;
+  position: relative;
+  padding: 1.5rem 1rem;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.loop-slider {
+  .inner {
+    display: flex;
+    width: fit-content;
+    padding: 25px ;
+    text-align: center;
+    animation-name: loop;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: var(--direction);
+    animation-duration: var(--duration);
+    cursor:pointer;
+  }
+}
+
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 0 0.2rem;
+  color: #e2e8f0;
+  width:10rem;
+  height: 5rem;
+  font-size: 0.9rem;
+  background-color: #334155;
+  border-radius: 0.4rem;
+  padding: 0.7rem 1rem;
+  margin-right: 1rem; // Must used margin-right instead of gap for the loop to be smooth
+  box-shadow: 
+    0 0.1rem 0.2rem rgb(0 0 0 / 20%),
+    0 0.1rem 0.5rem rgb(0 0 0 / 30%),
+    0 0.2rem 1.5rem rgb(0 0 0 / 40%);
+  
+  span {
+    font-size: 1.2rem;
+    color: #64748b;
+    //background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4621/treehouse-marker.png');
+    margin-left: -10px;
+     
+  }
+  
+}
+
+.tag:hover{
+  background-color:#FFC451;
+  color: #000;
+  font-weight: 900;
+  border-radius: 10px; 
+}
+.tag img{
+  width:15rem;
+  height: 5rem;
+  align-items: center;
+  transition: all;
+}
+.fade {
+  pointer-events: none;
+  background: linear-gradient(90deg, #1e293b, transparent 30%, transparent 70%, #1e293b);
+  position: absolute;
+  inset: 0;
+}
+
+@keyframes loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate__animated.animate__fadeInLeftBig {
+  --animate-duration: 5s;
 }
